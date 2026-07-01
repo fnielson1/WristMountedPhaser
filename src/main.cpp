@@ -34,13 +34,16 @@ void loop() {
     // continuously for a classic "pew" phaser sound while held.
     unsigned long elapsed = millis() % phaserSweepMs;
     int freq = phaserHighFreq - (int)((phaserHighFreq - phaserLowFreq) * elapsed / phaserSweepMs);
-    tone(speakerPin, freq);
+    if (freq != lastPhaserFreq) {
+      tone(speakerPin, freq);
+      lastPhaserFreq = freq;
+    }
   }
   else {
     digitalWrite(leftLedsPin, LOW);
     digitalWrite(rightLedsPin, LOW);
     digitalWrite(frontLedsPin, LOW);
     noTone(speakerPin);
-    digitalWrite(speakerPin, LOW);
+    lastPhaserFreq = -1;     
   }
 }
