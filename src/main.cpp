@@ -17,6 +17,13 @@ constexpr int phaserHighFreq = 2200;
 constexpr int phaserLowFreq = 500;
 int lastPhaserFreq = -1;
 
+// Each trigger pull fires a single shot of this length; the trigger must be
+// released and pressed again before another shot will fire.
+constexpr unsigned long shotDurationMs = 440;
+int lastTriggerState = HIGH;
+bool shotActive = false;
+unsigned long shotStartMs = 0;
+
 
 #ifdef ATtiny
 void setup()
@@ -48,14 +55,30 @@ void setup() {
 void loop() {
   int triggerState = digitalRead(PIN_TRIGGER);
 
-  if (triggerState == LOW) {
+  // Start a new shot only on the press edge (button was released last loop,
+  // pressed now). Holding the trigger down does not retrigger the shot.
+  if (triggerState == LOW && lastTriggerState == HIGH) {
+    shotActive = true;
+    shotStartMs = millis();
+  }
+  lastTriggerState = triggerState;
+
+  if (triggerState == HIGH) {
+    shotActive = false;
+  }
+
+  if (shotActive && millis() - shotStartMs >= shotDurationMs) {
+    shotActive = false;
+  }
+
+  if (shotActive) {
     digitalWrite(PIN_LEFT_LEDS, HIGH);
     digitalWrite(PIN_RIGHT_LEDS, HIGH);
     digitalWrite(PIN_FRONT_LEDS, HIGH);
 
-    // Sweep the tone from high to low every phaserSweepMs, looping
-    // continuously for a classic "pew" phaser sound while held.
-    unsigned long elapsed = millis() % phaserSweepMs;
+    // Sweep the tone from high to low every phaserSweepMs for a classic
+    // "pew" phaser sound over the shot's duration.
+    unsigned long elapsed = (millis() - shotStartMs) % phaserSweepMs;
     int freq = phaserHighFreq - (int)((phaserHighFreq - phaserLowFreq) * elapsed / phaserSweepMs);
     if (freq != lastPhaserFreq) {
       tone(PIN_SPEAKER, freq);
@@ -67,7 +90,7 @@ void loop() {
     digitalWrite(PIN_RIGHT_LEDS, LOW);
     digitalWrite(PIN_FRONT_LEDS, LOW);
     noTone(PIN_SPEAKER);
-    lastPhaserFreq = -1;     
+    lastPhaserFreq = -1;
   }
 }
 #endif
