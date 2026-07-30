@@ -2,7 +2,11 @@
 
 
 #ifdef ATtiny
-constexpr uint8_t PIN_LEFT_LEDS = PIN_PB0;
+constexpr uint8_t PIN_TRIGGER = PIN_PA3;
+constexpr uint8_t PIN_LEFT_LEDS = PIN_PA2;
+constexpr uint8_t PIN_RIGHT_LEDS = PIN_PA7;
+constexpr uint8_t PIN_FRONT_LEDS = PIN_PA6;
+constexpr uint8_t PIN_SPEAKER = PIN_PA1;
 #else 
 constexpr uint8_t PIN_TRIGGER = D2;
 constexpr uint8_t PIN_LEFT_LEDS = D8;
@@ -25,25 +29,7 @@ bool shotActive = false;
 unsigned long shotStartMs = 0;
 
 
-#ifdef ATtiny
-void setup()
-{
-  // initialize LED digital pin as an output.
-  pinMode(LEFT_LEDS_PIN, OUTPUT);
-}
 
-void loop()
-{
-  // turn the LED on (HIGH is the voltage level)
-  digitalWrite(LEFT_LEDS_PIN, HIGH);
-  // wait for a second
-  delay(500);
-  // turn the LED off by making the voltage LOW
-  digitalWrite(LEFT_LEDS_PIN, LOW);
-   // wait for a second
-  delay(500);
-}
-#else
 void setup() {
   pinMode(PIN_TRIGGER, INPUT_PULLUP);
   pinMode(PIN_LEFT_LEDS, OUTPUT);
@@ -93,4 +79,3 @@ void loop() {
     lastPhaserFreq = -1;
   }
 }
-#endif
