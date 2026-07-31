@@ -2,11 +2,11 @@
 
 
 #ifdef ATtiny
-constexpr uint8_t PIN_TRIGGER = PIN_PA3;
-constexpr uint8_t PIN_LEFT_LEDS = PIN_PA2;
-constexpr uint8_t PIN_RIGHT_LEDS = PIN_PA7;
-constexpr uint8_t PIN_FRONT_LEDS = PIN_PA6;
-constexpr uint8_t PIN_SPEAKER = PIN_PA1;
+constexpr uint8_t PIN_TRIGGER = PIN_PA1;
+constexpr uint8_t PIN_LEFT_LEDS = PIN_PA3;
+constexpr uint8_t PIN_RIGHT_LEDS = PIN_PA6;
+constexpr uint8_t PIN_FRONT_LEDS = PIN_PA7;
+constexpr uint8_t PIN_SPEAKER = PIN_PA2;
 #else 
 constexpr uint8_t PIN_TRIGGER = D2;
 constexpr uint8_t PIN_LEFT_LEDS = D8;
