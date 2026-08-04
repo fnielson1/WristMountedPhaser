@@ -678,7 +678,7 @@
         "uuid": "16f1b92c-442c-448b-bee7-a76f6ee2474e"
       }
     ],
-    "used_designators": "SW1,RightLedsTransitor1,SpeakerTransistor1,LeftLedsTransistor1,LLedGround1-2,D1\\-Speaker\\-D2\\-Trigger1,#PWR1-2,WemosD1Mini1,WmsPwr1,BT1,RightLeds1,BZ1,FLedGround2,Q1-3,WmsPower1,Spk1,BatteryPower1,LLeds_FLeds_RLeds1,LResToLedPad2-4,RResToLedPad2-3,LeftLedRes4-6,Speaker\\-Trigger1,J1-4,C1,UPDI1,RLedToTrn1,D1,U1-2,#FLG1-2,FrontLedsTransitor1,Trigger1,FResToLedPad2-5,BatPower1,BatPwr1,FrontLed5-8,H1-2,D6\\-LeftLeds_D7\\-FrontLeds_D8\\-RightLeds1,Speaker1,WemosPower1,FrontLedsRes4-8,R1-3,LeftLed2-6",
+    "used_designators": "UPDI1,C1,J1-4,Speaker\\-Trigger1,LeftLedRes4-6,RResToLedPad2-3,LResToLedPad2-4,LLeds_FLeds_RLeds1,BatteryPower1,Spk1,WmsPower1,SW1,Trigger1,FResToLedPad2-5,FLedGround2,Q1-3,FrontLed5-8,BatPower1,BatPwr1,H1-2,WemosPower1,FrontLedsRes4-8,FrontLedsTransitor1,#FLG1-2,LeftLed2-6,R1-3,D6\\-LeftLeds_D7\\-FrontLeds_D8\\-RightLeds1,Speaker1,BZ1,RightLeds1,#PWR1-2,D1\\-Speaker\\-D2\\-Trigger1,BT1,WmsPwr1,WemosD1Mini1,RLedToTrn1,D1,U1-2,RightLedsTransitor1,SpeakerTransistor1,LLedGround1-2,LeftLedsTransistor1",
     "variants": []
   },
   "sheets": [

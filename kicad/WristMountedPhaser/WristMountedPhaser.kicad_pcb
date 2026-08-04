@@ -8241,7 +8241,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "+5v"
+	(gr_text "VCC"
 		(at 48.468547 34.15 90)
 		(layer "F.SilkS")
 		(uuid "e47295fb-7f78-40f4-bc53-bfc30e6d235e")
@@ -8265,7 +8265,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "+5v"
+	(gr_text "VCC"
 		(at 48.468547 40.59 90)
 		(layer "F.SilkS")
 		(uuid "f5d4e47a-22c0-47c7-8897-d98feb31d41f")
@@ -8313,7 +8313,31 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "+5v"
+	(gr_text "Acceptable voltage: 3v3 to 5v"
+		(at 43.37 49.77 0)
+		(layer "B.SilkS")
+		(uuid "afd49746-0aba-4956-9e99-212d3c5bd04d")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "An ATTiny 402 may be used \ninstead of a Wemos D1 mini"
+		(at 43.37 52.4 0)
+		(layer "B.SilkS")
+		(uuid "1dd16b7d-69a0-437b-b376-bc2030ca2eb0")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "VCC"
 		(at 39.92 28.2 0)
 		(layer "B.SilkS")
 		(uuid "bb30e73d-5a0a-40af-97a0-820f2d74a151")
@@ -8385,22 +8409,10 @@
 			(justify left bottom mirror)
 		)
 	)
-	(gr_text "All Resistors are 150R\n\nSolder in order:"
-		(at 38.62 32.39 0)
+	(gr_text "5v (150R) 3v (100R)\nSolder in order:"
+		(at 39.6 32.16 0)
 		(layer "B.SilkS")
 		(uuid "7af9beff-5bb7-4e3a-adcd-c8eb7cd10509")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left bottom mirror)
-		)
-	)
-	(gr_text "An ATTiny 402 may be used \ninstead of a Wemos D1 mini"
-		(at 42.96 51.57 0)
-		(layer "B.SilkS")
-		(uuid "1dd16b7d-69a0-437b-b376-bc2030ca2eb0")
 		(effects
 			(font
 				(size 1 1)
