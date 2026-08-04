@@ -8313,6 +8313,18 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "5v (150R) 3v3 (100R)\nSolder in order:"
+		(at 38.62 32.16 0)
+		(layer "B.SilkS")
+		(uuid "7af9beff-5bb7-4e3a-adcd-c8eb7cd10509")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(gr_text "Acceptable voltage: 3v3 to 5v"
 		(at 43.37 49.77 0)
 		(layer "B.SilkS")
@@ -8401,18 +8413,6 @@
 		(at 38.62 27.7 0)
 		(layer "B.SilkS")
 		(uuid "3ea8c634-8c02-459b-a444-65cd38e15699")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify left bottom mirror)
-		)
-	)
-	(gr_text "5v (150R) 3v (100R)\nSolder in order:"
-		(at 39.6 32.16 0)
-		(layer "B.SilkS")
-		(uuid "7af9beff-5bb7-4e3a-adcd-c8eb7cd10509")
 		(effects
 			(font
 				(size 1 1)
