@@ -1,0 +1,6 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "BJT") (type "KiCad") (uri "${KIPRJMOD}/BJT.pretty") (options "") (descr ""))
+	(lib (name "BJT") (type "KiCad") (uri "${KIPRJMOD}/BJT.pretty") (options "") (descr ""))
+	(lib (name "BJT") (type "KiCad") (uri "${KIPRJMOD}/BJT.pretty") (options "") (descr ""))
+)
